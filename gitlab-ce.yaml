@@ -411,6 +411,8 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: ${ETC_VOL_NAME}-pvc
+    annotations:
+      volume.beta.kubernetes.io/storage-class: fast
   spec:
     accessModes:
     - ReadWriteOnce
@@ -424,6 +426,8 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: ${APPLICATION_NAME}-data-pvc
+    annotations:
+      volume.beta.kubernetes.io/storage-class: fast
   spec:
     accessModes:
     - ReadWriteOnce
@@ -437,6 +441,8 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: ${APPLICATION_NAME}-postgresql-pvc
+    annotations:
+      volume.beta.kubernetes.io/storage-class: fast
   spec:
     accessModes:
     - ReadWriteOnce
@@ -450,6 +456,8 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: ${APPLICATION_NAME}-redis-pvc
+    annotations:
+      volume.beta.kubernetes.io/storage-class: fast
   spec:
     accessModes:
     - ReadWriteOnce
